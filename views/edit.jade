@@ -5,6 +5,7 @@ block content
   form(method="POST", action="/student/#{edit._id}/edit" )
     p
       input(type="text", placeholder="Student Number", name="student_number" value="#{edit.student_number}")
+      br
     p
       input(type="text", placeholder="First Name", name="first_name" value="#{edit.first_name}")
     p
@@ -19,4 +20,6 @@ block content
       input(type="text", placeholder="Section", name="section" value="#{edit.section}")
     
     button(type="submit") Submit
+    br
+    a(href='/students') student lists
   
