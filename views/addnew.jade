@@ -1,0 +1,72 @@
+extends layout
+
+block content
+  .w3-top
+      ul#myNavbar.w3-navbar.w3-white.w3-card-2
+        li
+          a.w3-wide(href='/') HOME
+        // Right-sided navbar links
+        li.w3-right.w3-hide-small
+          a(href='/') ABOUT
+          a(href='/')
+            i.fa.fa-user
+            |  TEAM
+          a(href='/students')
+            i.fa.fa-th
+            |  VIEW LIST
+          a(href='/students/addnew')  ADD STUDENTS
+        // Hide right-floated links on small screens and replace them with a menu icon
+  .w3-container.w3-center.bgimg-1(style="width:100%")
+    
+
+         h3 Create New
+          hr
+         form(method="POST", style="width:500px; text-align:center;" action="/students/addnew")
+           p
+             label  Student Number
+           input.w3-input.w3-border(type='text', name='student_number', required='')
+           p
+             label  First Name
+           input.w3-input.w3-border(type='text', name='first_name', required='')
+           p
+             label  Last Name
+           input.w3-input.w3-border(type='text', name='last_name', required='')
+           p
+             label  Email
+           input.w3-input.w3-border(type='text', name='email', required='')
+           p
+             label  Contact Number
+           input.w3-input.w3-border(type='number', name='contact_number', required='')
+           p
+             label  Birthdate
+           input.w3-input.w3-border(type='date', name='birthdate', required='')
+           p
+             label  Section
+           input.w3-input.w3-border(type='number', name='section', min='1', max='5', required='')
+           p
+             button.w3-btn-block.w3-green.w3-padding(type='submit')  Submit
+
+
+       
+    
+          
+
+  //-       //h1 New Student
+  //-       form(method="POST", action="/students/addnew")
+  //-   p
+  //-     input(type="text", placeholder="Student Number", name="student_number")
+  //-   p
+  //-     input(type="text", placeholder="First Name", name="first_name")
+  //-   p
+  //-     input(type="text", placeholder="Last Name", name="last_name")
+  //-   p
+  //-     input(type="text", placeholder="Email", name="email")
+  //-   p
+  //-     input(type="number", placeholder="Contact number", name="contact_number")
+  //-   p
+  //-     input(type="date", placeholder="Birthdate", name="birthdate")
+  //-   p
+  //-     input(type="number", placeholder="Section", name="section") 
+  //-   button(type="submit") Submit
+  //- br
+  //-  a(href='/students') student lists

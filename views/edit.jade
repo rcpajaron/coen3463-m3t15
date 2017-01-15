@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Edit Student
+  form(method="POST", action="/student/#{edit._id}/edit" )
+    p
+      input(type="text", placeholder="Student Number", name="student_number" value="#{edit.student_number}")
+    p
+      input(type="text", placeholder="First Name", name="first_name" value="#{edit.first_name}")
+    p
+      input(type="text", placeholder="Last Name", name="last_name" value="#{edit.last_name}")
+    p
+      input(type="text", placeholder="Email", name="email" value="#{edit.email}")
+    p
+      input(type="text", placeholder="Contact Number", name="contact_number" value="#{edit.contact_number}")
+    p
+      input(type="text", placeholder="Birthdate", name="birthdate" value="#{edit.birthdate}")
+    p
+      input(type="text", placeholder="Section", name="section" value="#{edit.section}")
+    
+    button(type="submit") Submit
+  

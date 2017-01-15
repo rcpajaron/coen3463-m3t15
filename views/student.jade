@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Student Info
+  p Student Number: #{student.student_number}
+  p First Name: #{student.first_name}
+  p Last Name: #{student.last_name}
+  p Email: #{student.email}
+  p Contact Number: #{student.contact_number}
+  p Birthdate: #{student.birthdate}
+  p Section: #{student.section}
+
+  a(href='/student/' + student._id+'/edit') edit
+  br
+  a(href='/student/' + student._id+'/delete') delete
+  br
+  a(href='/students') student lists

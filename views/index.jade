@@ -1,0 +1,108 @@
+extends layout
+
+block content
+  
+    .w3-top
+      ul#myNavbar.w3-navbar.w3-white.w3-card-2
+        li
+          a.w3-wide(href='#home') HOME
+        // Right-sided navbar links
+        li.w3-right.w3-hide-small
+          a(href='#about') ABOUT
+          a(href='#team')
+            i.fa.fa-user
+            |  TEAM
+          a(href='/students')
+            i.fa.fa-th
+            |  VIEW LIST
+          a(href='/students/addnew')  ADD STUDENTS
+        // Hide right-floated links on small screens and replace them with a menu icon
+        li
+          a.w3-right.w3-hide-large.w3-hide-medium(href='javascript:void(0)', onclick='w3_open()')
+            i.fa.fa-bars.w3-padding-right.w3-padding-left
+    // Sidenav on small screens when clicking the menu icon
+    nav#mySidenav.w3-sidenav.w3-black.w3-card-2.w3-animate-left.w3-hide-medium.w3-hide-large(style='display:none')
+      a.w3-large.w3-padding-16(href='javascript:void(0)', onclick='w3_close()') Close ×
+      a(href='#about', onclick='w3_close()') ABOUT
+      a(href='#team', onclick='w3_close()') TEAM
+      a(href='#work', onclick='w3_close()') WORK
+      a(href='#pricing', onclick='w3_close()') PRICING
+      a(href='#contact', onclick='w3_close()') CONTACT
+    // Header with full-height image
+    header#home.bgimg-1.w3-display-container.w3-grayscale-min
+      .w3-display-left.w3-padding-xxlarge.w3-text-white
+        span.w3-jumbo.w3-hide-small 5TH YEAR BSCPE
+        br
+        span.w3-xxlarge.w3-hide-large.w3-hide-medium Start something that matters
+        br
+        span.w3-large POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
+        p
+          a.w3-btn.w3-white.w3-padding-large.w3-large.w3-margin-top.w3-opacity.w3-hover-opacity-off(href='https://www.pup.edu.ph/about/') Learn more 
+      
+    // About Section
+    #about.w3-container.w3-padding-128
+      h3.w3-center ABOUT 
+      p.w3-center.w3-large Key features of our organization
+      .w3-row-padding.w3-center(style='margin-top:64px')
+        .w3-quarter
+          i.fa.fa-desktop.w3-margin-bottom.w3-jumbo.w3-center
+          p.w3-large Responsive
+          p
+            | Clearing the paths while laying new foundations to transform the Polytechnic University of the Philippines into an epistemic community.
+        .w3-quarter
+          i.fa.fa-heart.w3-margin-bottom.w3-jumbo
+          p.w3-large Passion
+          p
+            | Provision of undergraduate and graduate education which meet international standards of quality and excellence.
+        .w3-quarter
+          i.fa.fa-diamond.w3-margin-bottom.w3-jumbo
+          p.w3-large Design
+          p
+            | Generation and transmission of knowledge in the broad range of disciplines relevant and responsive to the dynamically changing domestic and international environment.
+        .w3-quarter
+          i.fa.fa-cog.w3-margin-bottom.w3-jumbo
+          p.w3-large Support
+          p
+            | Optimization, through efficiency and effectiveness, of social, institutional, and individual returns and benefits derived from the utilization of higher education resources.
+    // Team Section
+    #team.w3-container.w3-padding-128(class="text-center")
+      h3.w3-center THE TEAM
+      p.w3-center.w3-large A team
+      .w3-row-padding.w3-grayscale(style='margin-top:64px')
+        .w3-col.l3.m6.w3-margin-bottom
+          .w3-card-2
+            img(src='/images/warren.png', alt='waaa', style='width:300px; height:350px')
+            .w3-container.w3-center
+              h3 Warren Mae Bernabe
+              p.w3-opacity Frontend Developer
+              p
+                | responsible for implementing visual elements that users see and interact with in a web application.
+              
+        .w3-col.l3.m6.w3-margin-bottom.w3-center
+          .w3-card-2
+            img(src='/images/roemar.png', alt='roy', style='width:300px; height:350px')
+            .w3-container
+              h3 Roemar Pajaron
+              p.w3-opacity Backend Developer
+              p
+                |  responsible for server-side web application logic and integration of the work front-end developers do.
+             
+    // Footer
+    footer.w3-center.w3-black.w3-padding-64
+      a.w3-btn.w3-padding.w3-light-grey.w3-hover-grey(href='#home')
+        i.fa.fa-arrow-up.w3-margin-right
+        | To the top
+      .w3-xlarge.w3-section
+        i.fa.fa-facebook-official.w3-hover-text-indigo
+        i.fa.fa-flickr.w3-hover-text-red
+        i.fa.fa-instagram.w3-hover-text-purple
+        i.fa.fa-twitter.w3-hover-text-light-blue
+        i.fa.fa-linkedin.w3-hover-text-indigo
+      p
+  //- h1= title
+  //- p Welcome to #{title}
+  //- a(href='/students') List
+  //- br
+  //- a(href='/menu') Test
+  //- br
+  //- a(href='/students/addnew') Add new
