@@ -19,5 +19,13 @@
   "devDependencies": {},
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcpajaron/coen3463-m3t15.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rcpajaron/coen3463-m3t15/issues"
+  },
+  "homepage": "https://github.com/rcpajaron/coen3463-m3t15#readme",
   "description": ""
 }
