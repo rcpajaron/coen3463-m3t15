@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var menu = require('./routes/menu');
 var create = require('./routes/create');
-var moment = require('moment');
+var moment = require('moment-timezone');
 
     
 
@@ -76,7 +76,7 @@ MongoClient.connect(mdbUrl, function(err, database) {
             contact_number: req.body.contact_number,
             birthdate: req.body.birthdate,
             section: req.body.section,
-            createdate: moment().format('LLL'),
+            createdate: moment().tz("Asia/Manila").format('LLL'),
 
         };
         db.collection('students')
@@ -121,7 +121,7 @@ MongoClient.connect(mdbUrl, function(err, database) {
             contact_number: req.body.contact_number,
             birthdate: req.body.birthdate,
             section: req.body.section,
-            updatedate: moment().format('LLL')
+            updatedate: moment().tz("Asia/Manila").format('LLL'),
           
         };
         studentCollection.updateOne({ _id: new ObjectId(studentId)},{$set: datasave}, function(err, student) {
