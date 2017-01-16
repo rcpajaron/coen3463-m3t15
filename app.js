@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var menu = require('./routes/menu');
 var addnew = require('./routes/addnew');
-var momen = require('moment');
+var moment = require('moment');
     
 
 var MongoClient = require('mongodb').MongoClient;
