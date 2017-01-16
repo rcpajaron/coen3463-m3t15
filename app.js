@@ -75,7 +75,7 @@ MongoClient.connect(mdbUrl, function(err, database) {
             contact_number: req.body.contact_number,
             birthdate: req.body.birthdate,
             section: req.body.section,
-            createdate: moment().format('LLL')
+            createdate: moment().format('LLL'),
 
         };
         db.collection('students')
@@ -120,6 +120,7 @@ MongoClient.connect(mdbUrl, function(err, database) {
             contact_number: req.body.contact_number,
             birthdate: req.body.birthdate,
             section: req.body.section,
+            updatedate: moment().format('LLL'),
             
         };
         studentCollection.updateOne({ _id: new ObjectId(studentId)},{$set: datasave}, function(err, student) {
