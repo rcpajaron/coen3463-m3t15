@@ -9,7 +9,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var menu = require('./routes/menu');
 var addnew = require('./routes/addnew');
-
+var momen = require('moment');
+    
 
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectId;
@@ -98,7 +99,6 @@ MongoClient.connect(mdbUrl, function(err, database) {
     });
     
     app.get('/student/:studentId/edit', function(req, res) { 
-    	//res.render('edit', {studentId:req.params.studentId})
      	var studentId = req.params.studentId;
         var studentCollection = db.collection('students');
         studentCollection.findOne({ _id: new ObjectId(studentId) }, function(err, student) {
@@ -119,6 +119,7 @@ MongoClient.connect(mdbUrl, function(err, database) {
             contact_number: req.body.contact_number,
             birthdate: req.body.birthdate,
             section: req.body.section,
+            createdate: moment().format('LLL')
         };
         studentCollection.updateOne({ _id: new ObjectId(studentId)},{$set: datasave}, function(err, student) {
             if(err){
