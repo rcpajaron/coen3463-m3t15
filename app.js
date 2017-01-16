@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var menu = require('./routes/menu');
-var addnew = require('./routes/addnew');
+var create = require('./routes/create');
 
     
 
@@ -45,13 +45,13 @@ MongoClient.connect(mdbUrl, function(err, database) {
 
     app.use('/', index);
     app.use('/menu', menu);
-    app.use('/addnew', addnew);
+    app.use('/create', create);
    
     app.get('/menu', function(req, res) {
           res.render('menu');
     });
-    app.get('/students/addnew', function(req, res) {
-          res.render('addnew');
+    app.get('/students/create', function(req, res) {
+          res.render('create');
     });
     
     app.get('/students', function(req, res) {
@@ -65,7 +65,7 @@ MongoClient.connect(mdbUrl, function(err, database) {
 
     });
 
-    app.post('/students/addnew', function(req, res) {
+    app.post('/students/create', function(req, res) {
         console.log(req.body);
         var dataToSave = {
             student_number: req.body.student_number,
@@ -84,7 +84,7 @@ MongoClient.connect(mdbUrl, function(err, database) {
                 return;
             }
             console.log("Saving Data Successful!");
-            res.redirect('/students/addnew');
+            res.redirect('/students/create');
         })
     });
 
