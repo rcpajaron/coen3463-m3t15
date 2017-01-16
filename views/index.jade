@@ -10,10 +10,10 @@ block content
         li.w3-right.w3-hide-small
           a(href='#about') ABOUT
           a(href='#team')
-            i.fa.fa-user
+            
             |  TEAM
           a(href='/students')
-            i.fa.fa-th
+           
             |  VIEW LIST
           a(href='/students/addnew')  ADD STUDENTS
         // Hide right-floated links on small screens and replace them with a menu icon
@@ -23,17 +23,17 @@ block content
     // Sidenav on small screens when clicking the menu icon
     nav#mySidenav.w3-sidenav.w3-black.w3-card-2.w3-animate-left.w3-hide-medium.w3-hide-large(style='display:none')
       a.w3-large.w3-padding-16(href='javascript:void(0)', onclick='w3_close()') Close ×
-      a(href='#about', onclick='w3_close()') ABOUT
-      a(href='#team', onclick='w3_close()') TEAM
-      a(href='#work', onclick='w3_close()') WORK
-      a(href='#pricing', onclick='w3_close()') PRICING
-      a(href='#contact', onclick='w3_close()') CONTACT
+      a(href='#about', onclick='w3_close()') 
+      a(href='#team', onclick='w3_close()') 
+      a(href='#work', onclick='w3_close()') 
+      a(href='#pricing', onclick='w3_close()') 
+      a(href='#contact', onclick='w3_close()') 
     // Header with full-height image
     header#home.bgimg-1.w3-display-container.w3-grayscale-min
-      .w3-display-left.w3-padding-xxlarge.w3-text-white
-        span.w3-jumbo.w3-hide-small 5TH YEAR BSCPE
+      .w3-display-left.w3-padding-xlarge.w3-text-white
+        span.w3-xxxlarge 5TH YEAR BSCPE
         br
-        span.w3-xxlarge.w3-hide-large.w3-hide-medium Start something that matters
+        
         br
         span.w3-large POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
         p
@@ -42,45 +42,46 @@ block content
     // About Section
     #about.w3-container.w3-padding-128
       h3.w3-center ABOUT 
-      p.w3-center.w3-large Key features of our organization
+      p.w3-center.w3-large OUT ORGANIZATION
       .w3-row-padding.w3-center(style='margin-top:64px')
         .w3-quarter
-          i.fa.fa-desktop.w3-margin-bottom.w3-jumbo.w3-center
-          p.w3-large Responsive
+          img(src='../images/pup.png' style='height: 200px; width: 200px' href='https://www.pup.edu.ph/about/')
+          p.w3-large Polytechnic University of the Philippines
           p
-            | Clearing the paths while laying new foundations to transform the Polytechnic University of the Philippines into an epistemic community.
+            | The Polytechnic University of the Philippines (PUP) is a government educational institution governed by Republic Act Number 8292 known as the Higher Education Modernization Act of 1997, and its Implementing Rules and Regulations contained in the Commission on Higher Education Memorandum Circular No. 4, series 1997. 
         .w3-quarter
-          i.fa.fa-heart.w3-margin-bottom.w3-jumbo
-          p.w3-large Passion
+          img(src='../images/engi.jpg' style='height: 200px; width: 200px')
+          p.w3-large PUP College of Engineering
           p
-            | Provision of undergraduate and graduate education which meet international standards of quality and excellence.
+            | The College of Engineering is one of the constituent colleges of the University and one of the premier engineering schools in the Philippines. The College confer degrees in civil engineering, mechanical engineering, electrical engineering, electronics and communications engineering, industrial engineering, computer engineering, and railway engineering.
+        
         .w3-quarter
-          i.fa.fa-diamond.w3-margin-bottom.w3-jumbo
-          p.w3-large Design
+          img(src='../images/cpe.jpg' style='height: 200px; width: 200px')
+          p.w3-large PUP BS Computer Engineering
           p
-            | Generation and transmission of knowledge in the broad range of disciplines relevant and responsive to the dynamically changing domestic and international environment.
+            | The Bachelor of Science in Computer Engineering (BSCoE) program provides basic background in science and engineering. The program emphasizes the fundamental concepts of the theory and use of electronics and electricity, analog and digital components, the analysis and design of digital computer hardware and the techniques required in order to interface a microprocessor to memories.
         .w3-quarter
-          i.fa.fa-cog.w3-margin-bottom.w3-jumbo
-          p.w3-large Support
+          img(src='../images/cemit.png' style='height: 200px; width: 200px' href='https://www.pup.edu.ph/about/')
+          p.w3-large CEMIT
           p
-            | Optimization, through efficiency and effectiveness, of social, institutional, and individual returns and benefits derived from the utilization of higher education resources.
+            | An organization committed to render service through the development and management of I.T
     // Team Section
-    #team.w3-container.w3-padding-128(class="text-center")
+    #team.w3-container.w3-padding-50(class="text-center")
       h3.w3-center THE TEAM
       p.w3-center.w3-large A team
       .w3-row-padding.w3-grayscale(style='margin-top:64px')
-        .w3-col.l3.m6.w3-margin-bottom
+        .w3-half.l3.m6.w3-margin-bottom.w3-center
           .w3-card-2
-            img(src='/images/warren.png', alt='waaa', style='width:300px; height:350px')
+            img(src='../images/warren.png', alt='waaa', style='width:200px; height:200px')
             .w3-container.w3-center
               h3 Warren Mae Bernabe
               p.w3-opacity Frontend Developer
               p
                 | responsible for implementing visual elements that users see and interact with in a web application.
               
-        .w3-col.l3.m6.w3-margin-bottom.w3-center
+        .w3-half.l3.m6.w3-margin-bottom.w3-center
           .w3-card-2
-            img(src='/images/roemar.png', alt='roy', style='width:300px; height:350px')
+            img(src='../images/roemar.png', alt='roy', style='width:200px; height:220px')
             .w3-container
               h3 Roemar D. Pajaron
               p.w3-opacity Backend Developer

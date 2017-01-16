@@ -1,6 +1,21 @@
 extends layout
 
 block content
+  .w3-top
+      ul#myNavbar.w3-navbar.w3-white.w3-card-2
+        li
+          a.w3-wide(href='/') HOME
+        // Right-sided navbar links
+        li.w3-right.w3-hide-small
+          a(href='/') ABOUT
+          a(href='/')
+            i.fa.fa-user
+            |  TEAM
+          a(href='/students')
+            i.fa.fa-th
+            |  VIEW LIST
+          a(href='/students/addnew')  ADD STUDENTS
+   
   h1 Student Info
   p Student Number: #{student.student_number}
   p First Name: #{student.first_name}

@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  h1 Edit Student
-  form(method="POST", action="/student/#{edit._id}/edit" )
+
+  h1 Edit Student 
+  form(method="POST", action="/student/#{edit._id}/edit" input align="center")
     p
       input(type="text", placeholder="Student Number", name="student_number" value="#{edit.student_number}")
       br
@@ -21,5 +22,5 @@ block content
     
     button(type="submit") Submit
     br
-    a(href='/students') student lists
+    button(href='/students') Student lists
   
