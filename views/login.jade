@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  .w3-top
+      ul#myNavbar.w3-navbar.w3-white.w3-card-2
+        li
+          a.w3-wide(href='/#home') HOME
+        // Right-sided navbar links
+        li.w3-right.w3-hide-small
+          a(href='/#about') ABOUT
+          a(href='/#team')
+            
+            |  TEAM
+          a(href='/auth/login-')
+           
+            |  VIEW LIST
+          a(href='/auth/login-')  ADD STUDENTS
+        // Hide right-floated links on small screens and replace them with a menu icon
+        li
+          a.w3-right.w3-hide-large.w3-hide-medium(href='javascript:void(0)', onclick='w3_open()')
+            i.fa.fa-bars.w3-padding-right.w3-padding-left
+    
+    form.w3-large(role="form", action="/auth/login", method="post" style='width:30%; margin-top:5%; margin-left:35%;')
+      .w3-container.w3-padding.w3-black
+        h2.w3-center Please Login to continue
+      .w3-container.w3-red-white.w3-center
+
+         
+        p Username:
+        
+          input.w3-center.w3-input.w3-border(name='username', type='text', placeholder='Enter your username', style='width:60%; margin-left:20%')
+        p Password:
+        
+          input.w3-center.w3-input.w3-border(name='password',type='password', placeholder='Enter your password', style='width:60%; margin-left:20%')
+        
+        p.w3-center
+
+          button.w3-btn-block.w3-padding.w3-black.w3-opacity.w3-hover-opacity-off.w3-center(type='submit', value='Log In', style='width:30%;') Login
+
+          p.w3-center
+        
+          a(href="/#home") Cancel 
+         Cancel  
+        
+          a(href="/auth/register") Register
+
+
+          
+             
+        
+   

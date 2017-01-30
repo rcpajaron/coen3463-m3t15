@@ -25,10 +25,10 @@ block content
   p Birthdate: #{student.birthdate}
   p Section: #{student.section}
   p Createdate: #{student.createdate}
-  p Updatedate: #{student.updatedates}
+  p Updatedate: #{student.updatedate}
 
-  a(href='/student/' + student._id+'/edit') edit
+  a(href='/students/' + student._id+'/edit') edit
   br
-  a(href='/student/' + student._id+'/delete') delete
+  a(href='/students/' + student._id+'/delete') delete
   br
   a(href='/students') student lists
