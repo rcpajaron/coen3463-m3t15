@@ -10,6 +10,9 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+const methodOverride = require('method-override')
+const restify = require('express-restify-mongoose')
+const router = express.Router()
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -64,6 +67,18 @@ passport.deserializeUser(User.deserializeUser());
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+mongoose.connect(MongoURI, function(err, res) {
+    if (err) {
+        console.log('Error connecting to ' + MongoURI);
+    } else {
+        console.log('MongoDB connected!');
+    }
+});
+
+restify.serve(router, Contact);
+app.use(router)
+
 
 app.use('/', index);
 app.use('/users', users);
