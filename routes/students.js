@@ -79,6 +79,7 @@ router.route('/:student_id')
   //   createdate = moment().tz("Asia/Manila").format('LLL'),
 
 router.route('/:student_id/edit')
+
   .all(function(req, res, next) {
     student_id = req.params.student_id;
     student = {};
@@ -106,7 +107,7 @@ router.route('/:student_id/edit')
       if(err) {
         res.status(400).send('Error saving student: ' + err);
       } else {
-        res.redirect('/students/'+student_id)
+        res.redirect('/students')
       }
     });
   })
