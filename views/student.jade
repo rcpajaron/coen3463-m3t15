@@ -24,7 +24,7 @@ block content
   p Contact Number: #{student.contact_number}
   p Birthdate: #{student.birthdate}
   p Section: #{student.section}
-  p Createdate: #{student.createdate}
+  p Createdate: #{moment(student.createdate).format('LLL')}
   p Updatedate: #{student.updatedate}
 
   a(href='/students/' + student._id+'/edit') edit

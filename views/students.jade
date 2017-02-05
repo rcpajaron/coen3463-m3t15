@@ -16,12 +16,10 @@ block content
             |  VIEW LIST
           a(href='/students/create')  ADD STUDENTS
         // Hide right-floated links on small screens and replace them with a menu icon
- 
   h2 Students List
+  p#count.panel-heading
+                 
   ul
-    for student in students
-      li
-        a(href='/students/' + student._id ) #{student.first_name} #{student.last_name}
-        br
+    li#table-body
         
   

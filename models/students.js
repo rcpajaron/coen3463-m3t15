@@ -19,13 +19,13 @@ var studentSchema = new Schema({
   contact_number: String,
   birthdate: String,
   section: String,
-  createdate: String,
+  createdate: Date,
   updatedate: String,
   notes: [{
     postedDate: {
       type: Date,
       'default': Date.now
-    },
+    }, 
     note: String
   }]
 });
