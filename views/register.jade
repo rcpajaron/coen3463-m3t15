@@ -1,13 +1,10 @@
 //- doctype html
+extends layout
 block content
-html
-  head
-    meta(charset='UTF-8')
+
     title Sign-Up/Login Form PUP CpE
-    link(href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600', rel='stylesheet', type='text/css')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
-    link(rel='stylesheet', href='css/style.css')
-  body
+    
+ 
     .form
       ul.tab-group
         li.tab.active
@@ -45,7 +42,7 @@ html
                 span.req *
               input(type='password', required='', autocomplete='off')
             a(href="#home")    
-            button.button.button-block(type='submit' a(href=#home)) Get Started
+            button.button.button-block(type='submit') Get Started
         #login
           h1 Welcome Back!
           form(action='/', method='post')
@@ -64,5 +61,3 @@ html
     // /form
     script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
     script(src='js/index.js')
-
-extends layout
